@@ -42,5 +42,17 @@
   </main>
   <footer class="footer"><div class="container"><div class="footerGrid"><div><div class="logo" style="color:#fff">Smile<span>Care</span> Dental</div><p>Modern, compassionate dentistry for Austin families.</p></div><div><h4>Visit</h4><a href="#contact">1234 Westlake Blvd, Austin, TX</a><a href="tel:+15125550148">(512) 555-0148</a></div><div><h4>Hours</h4><div>Mon–Fri: 8am–5pm</div><div>Sat–Sun: Closed</div></div></div><div class="copy">© 2026 SmileCare Dental. Demo website created for presentation purposes.</div></div></footer>
   <div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalBox"><button class="close" onclick="closeModal()">×</button><div class="kicker">Request a visit</div><h2 style="font-family:Manrope;margin:7px 0">Book an appointment</h2><p style="color:var(--muted);margin:0">This demo form is front-end only. A real client site can connect it to their preferred booking system.</p><form class="form" onsubmit="submitDemo(event)"><input required placeholder="Full name"><input required type="email" placeholder="Email address"><input required type="tel" placeholder="Phone number"><select required><option value="">Select a service</option><option>Cleaning & exam</option><option>Cosmetic consultation</option><option>Restorative consultation</option></select><textarea placeholder="Preferred day/time or message"></textarea><button class="btn primary" type="submit">Request Appointment</button></form></div></div>
-  <script>const modal=document.getElementById('modal');function openModal(){modal.classList.add('show')}function closeModal(){modal.classList.remove('show')}function submitDemo(e){e.preventDefault();alert('Demo only — the real client version would send this request to the practice.');closeModal()}</script>
+  <script>
+const modal=document.getElementById('modal');
+function openModal(){modal.classList.add('show')}
+function closeModal(){modal.classList.remove('show')}
+function submitDemo(e){e.preventDefault();alert('Demo only — the real client version would send this request to the practice.');closeModal()}
+
+const menuButton=document.querySelector('.menu');
+const navLinks=document.querySelector('.links');
+
+menuButton.addEventListener('click',function(){
+  navLinks.classList.toggle('mobile-open');
+});
+</script>
 </body></html>
